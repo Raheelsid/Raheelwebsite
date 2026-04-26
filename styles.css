@@ -57,7 +57,25 @@ body {
 .nav-logo-block {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-link {
+  display: inline-block;
+  margin-bottom: 4px;
+  transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+  opacity: 0.8;
+}
+
+.nav-logo-image {
+  height: 50px;
+  width: auto;
+  max-width: 60px;
+  object-fit: contain;
 }
 
 .nav-name {
