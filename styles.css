@@ -48,7 +48,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22px 60px;
+  padding: 14px 40px;
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--rule);
@@ -72,14 +72,14 @@ body {
 }
 
 .nav-logo-image {
-  height: 50px;
+  height: 40px;
   width: auto;
-  max-width: 60px;
+  max-width: 50px;
   object-fit: contain;
 }
 
 .nav-name {
-  font-size: 15px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--navy);
@@ -120,19 +120,19 @@ body {
 
 /* ──────────────────────── HERO SECTION ────────────────────────── */
 .hero {
-  min-height: 100vh;
+  min-height: 90vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
   overflow: hidden;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 .hero-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 100px 80px;
+  padding: 80px 60px;
   background: var(--white);
   position: relative;
   z-index: 2;
@@ -144,7 +144,7 @@ body {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--navy);
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -162,7 +162,7 @@ body {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .cred-pill {
@@ -196,7 +196,7 @@ h1 em {
   font-weight: 300;
   font-style: italic;
   line-height: 1.3;
-  margin-bottom: 36px;
+  margin-bottom: 28px;
   color: var(--navy);
   font-family: 'Cormorant Garamond', serif;
 }
@@ -207,7 +207,7 @@ h1 em {
   color: var(--muted);
   max-width: 460px;
   font-weight: 300;
-  margin-bottom: 52px;
+  margin-bottom: 40px;
 }
 
 .hero-cta-group {
@@ -409,7 +409,7 @@ h1 em {
 
 /* ──────────────────────── SECTIONS ────────────────────────── */
 .section {
-  padding: 100px 80px;
+  padding: 80px 60px;
 }
 
 .section-alt {
@@ -849,6 +849,100 @@ h2.light em {
   letter-spacing: 0.05em;
 }
 
+/* ──────────────────────── DISSERTATION SECTION ────────────────────────── */
+.dissertation-section {
+  background: var(--off-white);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.dissertation-card {
+  border: 1px solid var(--rule);
+  padding: 48px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: box-shadow 0.3s, border-color 0.3s;
+  margin-top: 48px;
+}
+
+.dissertation-card:hover {
+  border-color: var(--navy);
+  box-shadow: 0 12px 32px rgba(15, 32, 68, 0.08);
+}
+
+.diss-header {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.diss-icon {
+  font-size: 48px;
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+.diss-header h3 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+
+.diss-meta {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+.diss-highlights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 32px;
+  background: var(--navy-pale);
+  margin-bottom: 32px;
+  border-radius: 2px;
+}
+
+.highlight-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.highlight-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--navy);
+  opacity: 0.6;
+}
+
+.highlight-value {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--navy);
+  line-height: 1.4;
+}
+
+.diss-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.diss-btn {
+  margin-top: 16px;
+}
+
 /* ──────────────────────── RESPONSIVE ────────────────────────── */
 @media (max-width: 1024px) {
   .hero {
@@ -896,6 +990,20 @@ h2.light em {
 
   .section {
     padding: 60px 30px;
+  }
+
+  .diss-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dissertation-card {
+    padding: 32px;
+  }
+
+  .diss-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .section .hero-left {
@@ -954,6 +1062,20 @@ h2.light em {
 
   .section {
     padding: 40px 20px;
+  }
+
+  .diss-highlights {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 24px;
+  }
+
+  .dissertation-card {
+    padding: 24px;
+  }
+
+  .diss-header h3 {
+    font-size: 18px;
   }
 
   .hero-left {
