@@ -36,6 +36,7 @@ body {
   overflow-x: hidden;
   cursor: default;
   line-height: 1.6;
+  font-weight: 400;
 }
 
 /* ──────────────────────── NAVIGATION ────────────────────────── */
@@ -213,6 +214,7 @@ h1 em {
   display: inline-block;
   transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
   border-radius: 2px;
+  box-shadow: 0 4px 12px rgba(15, 32, 68, 0.2);
 }
 
 .btn-primary:hover {
